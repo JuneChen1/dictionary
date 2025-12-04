@@ -16,6 +16,9 @@ while True:
   dictionary[key.lower()] = value
 
 print("*********************")
-word = input("請輸入想查詢的單字：")
-result = dictionary.get(word.lower(), "單字不存在")
-print(result)
+while True:
+  word = input("請輸入想查詢的單字，內容輸入123時結束：")
+  if word == "123":
+    break
+  result = dictionary.get(word.lower(), "單字不存在")
+  print(result)

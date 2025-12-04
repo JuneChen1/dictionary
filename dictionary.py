@@ -1,13 +1,18 @@
 dictionary = {}
-print("請輸入英漢辭典，當key輸入end時結束：")
+print("請輸入英漢辭典，當英文內容輸入123時結束：")
 
 while True:
-  key = input("Key：")
-  if key == "end":
+  key = input("英文：")
+  if key == "123":
     break
-  value = input("Value：")
+  elif key.isalpha() != True:
+    print("請輸入英文單字")
+    continue
+
+  value = input("中文：")
   dictionary[key.lower()] = value
 
+print("*********************")
 word = input("請輸入想查詢的單字：")
 result = dictionary.get(word.lower(), "單字不存在")
 print(result)

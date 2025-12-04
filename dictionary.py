@@ -8,6 +8,9 @@ while True:
   elif key.isalpha() != True:
     print("請輸入英文單字")
     continue
+  elif dictionary.get(key.lower(), "none") != "none":
+    print("此單字已建檔，請勿重複建檔")
+    continue
 
   value = input("中文：")
   dictionary[key.lower()] = value

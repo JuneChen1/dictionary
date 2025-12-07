@@ -5,7 +5,7 @@ while True:
   key = input("英文：")
   if key == "123":
     break
-  elif key.isalpha() != True:
+  elif key.encode().isalpha() != True:
     print("請輸入英文單字")
     continue
   elif dictionary.get(key.lower(), "none") != "none":
